@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n, m;
+    cin >> n >> m;
+
+    // Если m делится на n, то в каждой клетке ровно m/n зайцев
+    // Иначе в одной клетке будет на одного зайца больше
+    if (m % n == 0) {
+        cout << m / n << endl;
+    } else {
+        cout << m / n + 1 << endl;
+    }
+
+    return 0;
+}
