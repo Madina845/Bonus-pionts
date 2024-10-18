@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+// Структура для хранения координат точки
+struct Point {
+    int x, y;
+};
+
+int main() {
+    int n;
+    cin >> n;  // Ввод количества точек
+
+    Point points[100];  // Массив для хранения точек (не более 100 точек)
+
+    double sum_x = 0, sum_y = 0;
+
+    // Чтение точек и вычисление сумм координат
+    for (int i = 0; i < n; ++i) {
+        cin >> points[i].x >> points[i].y;
+        sum_x += points[i].x;
+        sum_y += points[i].y;
+    }
+
+    // Вычисляем координаты центра тяжести
+    double center_x = sum_x / n;
+    double center_y = sum_y / n;
+
+    // Выводим результат с точностью до 15 знаков
+    cout << fixed << setprecision(15) << center_x << " " << center_y << endl;
+
+    return 0;
+}
