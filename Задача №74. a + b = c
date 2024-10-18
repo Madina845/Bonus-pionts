@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>  // для функции fabs()
+
+using namespace std;
+
+int main() {
+    double a, b, c;
+    cin >> a >> b >> c;  // Вводим числа a, b, c
+    
+    // Задаем допустимую погрешность для сравнения чисел с плавающей точкой
+    const double EPS = 1e-7;
+
+    // Проверяем, равны ли a + b и c с учетом погрешности EPS
+    if (fabs((a + b) - c) < EPS) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
