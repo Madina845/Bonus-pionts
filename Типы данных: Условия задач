@@ -1,0 +1,35 @@
+#include <iostream>
+#include <set>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;  // Вводим количество запросов
+
+    set<int> s;  // Множество для хранения уникальных чисел
+
+    for (int i = 0; i < N; ++i) {
+        string query;
+        cin >> query;  // Вводим запрос
+
+        if (query == "ADD") {
+            int num;
+            cin >> num;
+            s.insert(num);  // Добавляем элемент в множество
+        } else if (query == "PRESENT") {
+            int num;
+            cin >> num;
+            if (s.count(num)) {
+                cout << "YES" << endl;  // Элемент найден в множестве
+            } else {
+                cout << "NO" << endl;  // Элемент не найден
+            }
+        } else if (query == "COUNT") {
+            cout << s.size() << endl;  // Выводим количество элементов
+        }
+    }
+
+    return 0;
+}
