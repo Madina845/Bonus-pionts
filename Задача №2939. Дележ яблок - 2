@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, K;
+    cin >> N >> K;  // Считываем количество школьников и количество яблок
+
+    // Рассчитываем, сколько яблок останется в корзинке
+    cout << K % N << endl;
+
+    return 0;
+}
