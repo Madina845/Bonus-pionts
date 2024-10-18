@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    int countZeros = 0, countPositives = 0, countNegatives = 0;
+    int number;
+
+    // Вводим количество чисел
+    cin >> N;
+
+    // Вводим числа и считаем количество нулей, положительных и отрицательных чисел
+    for (int i = 0; i < N; ++i) {
+        cin >> number;
+        if (number == 0) {
+            ++countZeros;
+        } else if (number > 0) {
+            ++countPositives;
+        } else {
+            ++countNegatives;
+        }
+    }
+
+    // Выводим количество нулей, положительных и отрицательных чисел
+    cout << countZeros << " " << countPositives << " " << countNegatives << endl;
+
+    return 0;
+}
