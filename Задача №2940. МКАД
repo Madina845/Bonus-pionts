@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int v, t;
+    const int MKAD_length = 109;    
+    cin >> v >> t;
+    int position = (v * t) % MKAD_length;
+    if (position < 0) {
+        position += MKAD_length;
+    }
+    
+    cout << position << endl;
+    
+    return 0;
+}
