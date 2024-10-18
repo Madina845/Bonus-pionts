@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    
+    // Вводим два числа
+    cin >> a >> b;
+    
+    // Выводим наибольшее из двух чисел
+    cout << max(a, b) << endl;
+    
+    return 0;
+}
