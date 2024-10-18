@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>  // Для функции sqrt()
+
+int main() {
+    int a, b;
+    std::cin >> a >> b;
+
+    double c = std::sqrt(a * b + b * b);
+
+    std::cout << c << std::endl;
+
+    return 0;
+}
+``
